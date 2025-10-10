@@ -8,15 +8,16 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-pwlist=[]
-for char in range(0,nr_letters):
+pwlist=[]                                  # Create an empty list to begin storing PW variables
+
+for char in range(0,nr_letters):           # for range 0-user entered amount of letters, go through letters list and add random letters
     pwlist+=random.choice(letters)
-for char in range(0,nr_symbols):
+for char in range(0,nr_symbols ):           # for range 0-user entered amount of symbols, go through symbol list and add random symbols
     pwlist+=random.choice(symbols)
-for char in range(0,nr_numbers):
+for char in range(0,nr_numbers):           # for range 0-user entered amount of numbers, go through letters list and add random numbers
     pwlist+=random.choice(numbers)
-random.shuffle(pwlist)
-pw=""
-for char in pwlist:
+random.shuffle(pwlist)           # Now that we have all characters, randomly shuffle them and re-store as pwlist
+pw=""                           # Set PW to a blank value
+for char in pwlist:           #for each char in pwlist, add char to pw. basically, convert list of characters to a str
     pw+=char
-print(pw)
+print(pw)                        #print final PW
