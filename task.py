@@ -1,0 +1,5 @@
+print("Welcome to the Band Generator!")
+city = input("Now tell me...where did you grow up?\n")
+print("Interesting...Okay")
+pet = input("What was your pet's name growing up in " + city + "?\n")
+print("I'm thinking...\nA great name for your band would be " + city + " " + pet + "!")
